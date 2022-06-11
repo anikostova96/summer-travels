@@ -177,14 +177,14 @@ div.actions a {
 footer {
     margin-top: auto;
     text-align: center;
-    background: #234465;
+    background: #dae693;
 }
 
 footer p {
     padding: 1rem 0;
     font-weight: bold;
     margin: 0rem;
-    color: white;
+    color: rgb(42, 83, 165);
 }
 
 .no-trips {
