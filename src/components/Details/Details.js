@@ -1,7 +1,7 @@
 function Details() {
     return(
         <section id="details-page" class="details">
-            <div class="book-information">
+            <div class="trip-information">
                 <h3>A Court of Thorns and Roses</h3>
                 <p class="type">Type: Fiction</p>
                 <p class="img"><img src="/images/book1.png"/></p>
@@ -17,7 +17,7 @@ function Details() {
                     </div>
                 </div>
             </div>
-            <div class="book-description">
+            <div class="trip-description">
                 <h3>Description:</h3>
                 <p>Feyre's survival rests upon her ability to hunt and kill – the forest where she lives is a cold,
                     bleak place in the long winter months. So when she spots a deer in the forest being pursued by a

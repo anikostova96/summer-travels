@@ -3,7 +3,7 @@ function Create() {
         <section id="create-page" class="create">
             <form id="create-form" action="" method="">
                 <fieldset>
-                    <legend>Add new Book</legend>
+                    <legend>Add new Trip</legend>
                     <p class="field">
                         <label for="title">Title</label>
                         <span class="input">
@@ -34,7 +34,7 @@ function Create() {
                             </select>
                         </span>
                     </p>
-                    <input class="button submit" type="submit" value="Add Book"/>
+                    <input class="button submit" type="submit" value="Add Trip"/>
                 </fieldset>
             </form>
         </section>

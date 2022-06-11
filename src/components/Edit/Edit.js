@@ -3,7 +3,7 @@ function Edit(params) {
         <section id="edit-page" class="edit">
             <form id="edit-form" action="#" method="">
                 <fieldset>
-                    <legend>Edit my Book</legend>
+                    <legend>Edit my Trip</legend>
                     <p class="field">
                         <label for="title">Title</label>
                         <span class="input">

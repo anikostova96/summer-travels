@@ -71,6 +71,11 @@ li {
     position: relative;
     overflow: hidden;
     padding: 0rem;
+    border-radius: 25px;
+}
+
+.img:hover {
+    transform: scale(1.1);
 }
 
 img {
@@ -92,8 +97,8 @@ img {
 .detailsOtherBooks,
 .detailsMyBooks,
 .deleteBook,
-.otherBooks,
-.myBooks {
+.otherTrips,
+.myTrips {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,8 +106,8 @@ img {
 
 .detailsMyBooks>p:nth-child(2),
 .deleteBook>p:nth-child(2),
-.otherBooks>p:nth-child(2),
-.myBooks>p:nth-child(2) {
+.otherTrips>p:nth-child(2),
+.myTrips>p:nth-child(2) {
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -122,7 +127,7 @@ img {
 }
 
 .basic h1,
-.my-books h1,
+.my-trips h1,
 .dashboard h1 {
     text-align: center;
     margin: 0rem;
@@ -157,15 +162,15 @@ div.actions a {
     padding-bottom: 1rem;
 }
 
-.my-books .my-books-list,
-.dashboard .other-books-list {
+.my-trips .my-trips-list,
+.dashboard .other-trips-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .detailsMyBooks textarea,
-.my-books textarea {
+.my-trips textarea {
     margin-bottom: 2rem;
 }
 
@@ -182,7 +187,7 @@ footer p {
     color: white;
 }
 
-.no-books {
+.no-trips {
     font-weight: bold;
     font-size: large;
     text-align: center;
@@ -193,7 +198,7 @@ textarea#description {
     resize: none;
 }
 
-.otherBooks {
+.otherTrips {
     border-radius: 10px;
     text-align: center;
     margin: 2rem;
@@ -206,15 +211,15 @@ textarea#description {
 }
 
 
-.otherBooks:hover {
+.otherTrips:hover {
     box-shadow: 30px 30px 100px 10px #000000;
 }
 
-.details > .book-information > .img {
+.details > .trip-information > .img {
     width: 60%;
     align-items: center;
 }
-.details > .book-information > .button {
+.details > .trip-information > .button {
     width: 30%;
     text-align: center;
 }
