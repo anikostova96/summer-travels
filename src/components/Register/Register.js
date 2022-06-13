@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 import { register } from '../../services/authService';
 
 function Register() {
-    let userCont = useContext(UserContext);
+    let {settingUser} = useContext(UserContext);
     let navigate = useNavigate();
     const registerSubmit = (e) => {
         e.preventDefault();
@@ -16,7 +16,7 @@ function Register() {
   
         register(data)
         .then(res => {
-          userCont(res);
+            settingUser(res);
           navigate('/');
         });
       }
@@ -27,19 +27,19 @@ function Register() {
                 <fieldset>
                     <legend>Register Form</legend>
                     <p className="field">
-                        <label for="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <span className="input">
                             <input type="text" name="email" id="email" placeholder="Email" />
                         </span>
                     </p>
                     <p className="field">
-                        <label for="password">Password</label>
+                        <label htmlFor="password">Password</label>
                         <span className="input">
                             <input type="password" name="password" id="password" placeholder="Password" />
                         </span>
                     </p>
                     <p className="field">
-                        <label for="repeat-pass">Repeat Password</label>
+                        <label htmlFor="repeat-pass">Repeat Password</label>
                         <span className="input">
                             <input type="password" name="confirm-pass" id="repeat-pass" placeholder="Repeat Password" />
                         </span>

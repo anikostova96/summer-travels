@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 function Header({
     userInfo
 }) {
@@ -5,17 +7,17 @@ function Header({
         <header id="site-header">
             <nav className="navbar">
                 <section className="navbar-dashboard">
-                    <a href="/">Catalog</a>
+                    <Link to="/">Catalog</Link>
                     {userInfo.email
                         ? <div id="user">
                             <span>Welcome, {userInfo.email}</span>
-                            <a className="button" href="/my-trips">My Trips</a>
-                            <a className="button" href="/create">Add Trip</a>
-                            <a className="button" href="/logout">Logout</a>
+                            <Link className="button" to="/my-trips">My Trips</Link>
+                            <Link className="button" to="/create">Add Trip</Link>
+                            <Link className="button" to="/logout">Logout</Link>
                         </div>
                         : <div id="guest">
-                            <a className="button" href="/login">Login</a>
-                            <a className="button" href="/register">Register</a>
+                            <Link className="button" to="/login">Login</Link>
+                            <Link className="button" to="/register">Register</Link>
                         </div>}
 
                 </section>

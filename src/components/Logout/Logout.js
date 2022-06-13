@@ -4,11 +4,11 @@ import {Navigate} from 'react-router-dom';
 import UserContext from "../../contexts/UserContext";
 
 function Logout() {
-    let userCont = useContext(UserContext);
+    let {settingUser, userInfo} = useContext(UserContext);
 
-    logout()
+    logout(userInfo.accessToken)
     .then(res => {
-      userCont({})
+        settingUser({})
     })
     return (
       <Navigate to={'/'}></Navigate>

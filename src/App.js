@@ -11,12 +11,11 @@ import Logout from "./components/Logout/Logout";
 
 function App() {
   let [userInfo, setUserInfo] = useState({});
-  console.log(userInfo);
   let settingUser = (user) => {
     setUserInfo(user);
   }
   return (
-    <UserContext.Provider value={settingUser}>
+    <UserContext.Provider value={{settingUser, userInfo}}>
       <div id="container">
 
         <Header userInfo={userInfo} />

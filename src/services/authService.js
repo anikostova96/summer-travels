@@ -26,8 +26,13 @@ async function register(data) {
     return result;
 }
 
-async function logout() {
-    const res = await fetch(`${host}/users/logout`);
+async function logout(token) {
+    const res = await fetch(`${host}/users/logout`, {
+        method: 'GET',
+        headers: {
+            'X-Authorization': token
+        }
+    });
     return res;
 }
 
