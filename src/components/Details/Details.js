@@ -5,7 +5,7 @@ import IsOwner from '../utils/IsOwner';
 import IsUser from '../utils/IsUser';
 import {useContext} from 'react';
 import UserContext from "../../contexts/UserContext";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 
 function Details() {
     let [trip, setTrip] = useState({});
@@ -38,7 +38,7 @@ function Details() {
                 <p className="img"><img src={trip.imageUrl} width="150" height="150"/></p>
                 <div className="actions">
                     {isUser ?
-                        isOwner ? <><a className="button" href="#">Edit</a> <a onClick={deleteHandler} className="button" href={`/delete/${trip._id}`}>Delete</a></>
+                        isOwner ? <><Link className="button" to={`/edit/${tripId}`}>Edit</Link> <a onClick={deleteHandler} className="button" href={`/delete/${trip._id}`}>Delete</a></>
                             : <a className="button" href="#">Like</a>
                         : ''}
 

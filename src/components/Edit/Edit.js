@@ -1,38 +1,66 @@
-function Edit(params) {
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import {editTrip, getById } from '../../services/tripService';
+import { useContext } from 'react';
+import UserContext from "../../contexts/UserContext";
+import { useNavigate } from 'react-router-dom';
+
+
+function Edit() {
+    let [trip, setTrip] = useState({});
+    let tripId = useParams().id;
+    let navigate = useNavigate();
+    let { userInfo } = useContext(UserContext);
+
+    useEffect(() => {
+        getById(tripId)
+            .then(res => {
+                setTrip(res)
+            })
+    }, []);
+
+    const editHandler = (e) => {
+        e.preventDefault();
+        let formData = new FormData(e.currentTarget);
+        let title = formData.get('title');
+        let description = formData.get('description');
+        let imageUrl = formData.get('imageUrl');
+        let price = formData.get('price');
+        let data = { title, description, imageUrl, price };
+
+        editTrip(tripId, data, userInfo.accessToken)
+            .then(res => {
+                navigate(`/details/${tripId}`);
+            });
+    }
     return (
         <section id="edit-page" className="edit">
-            <form id="edit-form" action="#" method="">
+            <form id="edit-form" onSubmit={editHandler} >
                 <fieldset>
                     <legend>Edit my Trip</legend>
                     <p className="field">
-                        <label for="title">Title</label>
+                        <label htmlFor="title">Title</label>
                         <span className="input">
-                            <input type="text" name="title" id="title" value="A Court of Thorns and Roses"/>
+                            <input type="text" name="title" id="title" defaultValue={trip.title} />
                         </span>
                     </p>
                     <p className="field">
-                        <label for="description">Description</label>
+                        <label htmlFor="description">Description</label>
                         <span className="input">
                             <textarea name="description"
-                                id="description">Feyre's survival rests upon her ability to hunt and kill – the forest where she lives is a cold, bleak place in the long winter months. So when she spots a deer in the forest being pursued by a wolf, she cannot resist fighting it for the flesh. But to do so, she must kill the predator and killing something so precious comes at a price ...</textarea>
+                                id="description" defaultValue={trip.description} ></textarea>
                         </span>
                     </p>
                     <p className="field">
-                        <label for="image">Image</label>
+                        <label htmlFor="image">Image</label>
                         <span className="input">
-                            <input type="text" name="imageUrl" id="image" value="/images/book1.png"/>
+                            <input type="text" name="imageUrl" id="image" defaultValue={trip.imageUrl} />
                         </span>
                     </p>
                     <p className="field">
-                        <label for="type">Type</label>
+                        <label htmlFor="price">Price</label>
                         <span className="input">
-                            <select id="type" name="type" value="Fiction">
-                                <option value="Fiction" selected>Fiction</option>
-                                <option value="Romance">Romance</option>
-                                <option value="Mistery">Mistery</option>
-                                <option value="Classic">Clasic</option>
-                                <option value="Other">Other</option>
-                            </select>
+                            <input type="number" name="price" id="price" defaultValue={trip.price} />
                         </span>
                     </p>
                     <input className="button submit" type="submit" value="Save"/>

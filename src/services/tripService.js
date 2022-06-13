@@ -41,5 +41,18 @@ async function deleteTrip(id, token) {
     return res;
 }
 
+async function editTrip(tripId, data, token) {
+    const res = await fetch(`${host}/data/trips/${tripId}`, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json',
+            'X-Authorization': token
+        },
+        body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    return result
+}
 
-export { getAll, createTrip, myTripss, getById, deleteTrip };
+
+export { getAll, createTrip, myTripss, getById, deleteTrip, editTrip };

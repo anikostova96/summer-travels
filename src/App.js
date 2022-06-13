@@ -9,6 +9,7 @@ import UserContext from "./contexts/UserContext";
 import {useState} from 'react';
 import Logout from "./components/Logout/Logout";
 import Details from "./components/Details/Details";
+import Edit from "./components/Edit/Edit";
 
 function App() {
   let [userInfo, setUserInfo] = useState({});
@@ -29,6 +30,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/create" element={<Create />} />
             <Route path="/details/:id" element={<Details />} />
+            <Route path="/edit/:id" element={<Edit />} />
             <Route path="/my-trips" element={<MyTrips />} />
           </Routes>
         </main>
