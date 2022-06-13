@@ -1,16 +1,16 @@
 import {useEffect, useState} from 'react';
+import { getAll } from '../../services/tripService';
 import Trip from './Trip';
 
 function Catalog() {
     let [trips, setTrips] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3030/data/books?sortBy=_createdOn%20desc')
-        .then(res => res.json())
+        getAll()
         .then(res => {
             setTrips(res)
         })
-    })
+    }, []);
 
     return (
         <section id="dashboard-page" className="dashboard">
