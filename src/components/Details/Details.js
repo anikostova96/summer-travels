@@ -1,13 +1,18 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { getById } from '../../services/tripService';
+import { deleteTrip, getById } from '../../services/tripService';
 import IsOwner from '../utils/IsOwner';
 import IsUser from '../utils/IsUser';
+import {useContext} from 'react';
+import UserContext from "../../contexts/UserContext";
+import {useNavigate} from 'react-router-dom';
 
 function Details() {
     let [trip, setTrip] = useState({});
     let tripId = useParams().id;
     let isOwner = IsOwner(trip._ownerId);
+    let {userInfo} = useContext(UserContext);
+    let navigate = useNavigate();
     let isUser = IsUser();
     useEffect(() => {
         getById(tripId)
@@ -15,6 +20,16 @@ function Details() {
                 setTrip(res)
             })
     }, []);
+
+    const deleteHandler = (e) => {
+        e.preventDefault();
+        deleteTrip(tripId, userInfo.accessToken)
+        .then(res => {
+           navigate('/');
+        })
+
+    } 
+
     return (
         <section id="details-page" className="details">
             <div className="trip-information">
@@ -23,7 +38,7 @@ function Details() {
                 <p className="img"><img src={trip.imageUrl} width="150" height="150"/></p>
                 <div className="actions">
                     {isUser ?
-                        isOwner ? <><a className="button" href="#">Edit</a> <a className="button" href="#">Delete</a></>
+                        isOwner ? <><a className="button" href="#">Edit</a> <a onClick={deleteHandler} className="button" href={`/delete/${trip._id}`}>Delete</a></>
                             : <a className="button" href="#">Like</a>
                         : ''}
 

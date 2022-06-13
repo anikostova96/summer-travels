@@ -31,5 +31,15 @@ async function getById(id) {
     return result
 }
 
+async function deleteTrip(id, token) {
+    const res = await fetch(`${host}/data/trips/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'X-Authorization': token
+        }
+    });
+    return res;
+}
 
-export { getAll, createTrip, myTripss, getById };
+
+export { getAll, createTrip, myTripss, getById, deleteTrip };
