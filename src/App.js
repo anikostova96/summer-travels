@@ -8,6 +8,7 @@ import Create from "./components/Create/Create";
 import UserContext from "./contexts/UserContext";
 import {useState} from 'react';
 import Logout from "./components/Logout/Logout";
+import Details from "./components/Details/Details";
 
 function App() {
   let [userInfo, setUserInfo] = useState({});
@@ -27,6 +28,7 @@ function App() {
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
             <Route path="/create" element={<Create />} />
+            <Route path="/details/:id" element={<Details />} />
             <Route path="/my-trips" element={<MyTrips />} />
           </Routes>
         </main>

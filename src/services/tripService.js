@@ -25,5 +25,11 @@ async function myTripss(userId) {
     return result
 }
 
+async function getById(id) {
+    const res = await fetch(`${host}/data/trips/${id}`);
+    const result = await res.json();
+    return result
+}
 
-export { getAll, createTrip, myTripss };
+
+export { getAll, createTrip, myTripss, getById };

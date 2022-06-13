@@ -95,7 +95,7 @@ img {
 }
 
 .detailsOtherBooks,
-.detailsMyBooks,
+.detailsMyTrips,
 .deleteBook,
 .otherTrips,
 .myTrips {
@@ -104,7 +104,7 @@ img {
     align-items: center;
 }
 
-.detailsMyBooks>p:nth-child(2),
+.detailsMyTrips>p:nth-child(2),
 .deleteBook>p:nth-child(2),
 .otherTrips>p:nth-child(2),
 .myTrips>p:nth-child(2) {
@@ -156,7 +156,7 @@ div.actions a {
 }
 
 .deleteBook>form,
-.detailsMyBooks>form {
+.detailsMyTrips>form {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
@@ -169,7 +169,7 @@ div.actions a {
     flex-wrap: wrap;
 }
 
-.detailsMyBooks textarea,
+.detailsMyTrips textarea,
 .my-trips textarea {
     margin-bottom: 2rem;
 }
@@ -216,7 +216,7 @@ textarea#description {
 }
 
 .details > .trip-information > .img {
-    width: 60%;
+    width: 100%;
     align-items: center;
 }
 .details > .trip-information > .button {
@@ -225,7 +225,7 @@ textarea#description {
 }
 
 .details {
-    margin:  30px;
+    margin:  10px;
 }
 
 .likes {

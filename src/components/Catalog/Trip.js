@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 function Trip({
     trip
 }) {
@@ -6,7 +7,7 @@ function Trip({
             <h3>{trip.title}</h3>
             <p>Price: $ {trip.price}</p>
             <p className="img"><img src={trip.imageUrl} /></p>
-            <a className="button" href="#">Learn More</a>
+            <Link className="button" to={`/details/${trip._id}`}>Learn More</Link>
         </li>
     );
 }
