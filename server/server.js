@@ -1337,7 +1337,7 @@
             'b559bd24-5fb6-4a42-bc48-40c17dea649d': {
                 '_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
                 'title': 'Paris',
-                'description': 'Feyre\'s survival rests upon her ability to hunt and kill – the forest where she lives is a cold, bleak place in the long winter months. So when she spots a deer in the forest being pursued by a wolf, she cannot resist fighting it for the flesh. But to do so, she must kill the predator and killing something so precious comes at a price ...',
+                'description': 'Paris is the capital and most populous city of France, with an estimated population of 2,165,423 residents in 2019 in an area of more than 105 square kilometres (41 square miles), making it the 34th most densely populated city in the world in 2020.',
                 'imageUrl': '/images/ban_img3.jpg',
                 'price': 1000,
                 '_createdOn': 1617797078108
@@ -1345,7 +1345,7 @@
             '2949b54d-b163-4a00-b65c-41fb8b641561': {
                 '_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
                 'title': 'Barcelona',
-                'description': 'The year is 1945. Claire Randall, a former combat nurse, is just back from the war and reunited with her husband on a second honeymoon when she walks through a standing stone in one of the ancient circles that dot the British Isles. Suddenly she is a Sassenach—an “outlander”—in a Scotland torn by war and raiding border clans in the year of Our Lord...1743.',
+                'description': 'Barcelona is a city on the coast of northeastern Spain. It is the capital and largest city of the autonomous community of Catalonia, as well as the second most populous municipality of Spain. ',
                 'imageUrl': '/images/ban_img1.jpg',
                 'price': 1500,
                 '_createdOn': 1617799443179
@@ -1353,7 +1353,7 @@
             'f6f54fcd-0469-470b-8ffa-a33ae6c7a524': {
                 '_ownerId': '847ec027-f659-4086-8032-5173e2f9c93a',
                 'title': 'Goa',
-                'description': 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. "To Kill A Mockingbird" became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.',
+                'description': 'Goa is a state on the southwestern coast of India within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats. It is located between the Indian states of Maharashtra to the north and Karnataka to the east and south.',
                 'imageUrl': '/images/ban_img2.jpg',
                 'price': 1600,
                 '_createdOn': 1617799658349
@@ -1361,7 +1361,7 @@
             'f6f54fcd-0469-470b-8ffa-a33ae4c7a554': {
                 '_ownerId': '847ec027-f659-4086-8032-5173e2f9c93a',
                 'title': 'Egypt',
-                'description': 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. "To Kill A Mockingbird" became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.',
+                'description': 'Egypt , officially the Arab Republic of Egypt, is a transcontinental country spanning the northeast corner of Africa and southwest corner of Asia via a land bridge formed by the Sinai Peninsula. It is bordered by the Mediterranean Sea to the north, the Gaza Strip (Palestine) and Israel to the northeast.',
                 'imageUrl': '/images/egypr.jpg',
                 'price': 2000,
                 '_createdOn': 1617799658349
@@ -1369,7 +1369,7 @@
             'f6f54fcd-0469-470b-8ffa-a35ae4c7a554': {
                 '_ownerId': '847ec027-f659-4086-8032-5173e2f9c93a',
                 'title': 'Thailand',
-                'description': 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. "To Kill A Mockingbird" became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.',
+                'description': 'Thailand , historically known as Siam (/saɪˈæm, ˈsaɪæm/) and officially the Kingdom of Thailand, is a country in Southeast Asia spanning 513,120 square kilometres (198,120 sq mi), with a population of almost 70 million. It is bordered to the north by Myanmar and Laos, to the east by Laos and Cambodia, to the south by the Gulf of Thailand and Malaysia, and to the west by the Andaman Sea and Myanmar.',
                 'imageUrl': '/images/tthailand.jpg',
                 'price': 2100,
                 '_createdOn': 1617799658349
