@@ -17,7 +17,7 @@ You may also see any lint errors in the console.
 ### `cd server`
 ### `node server.js`
 
-Runs the server localy at http://localhost:3030
+Runs the server locally at http://localhost:3030
 
 ### `npm test`
 
