@@ -39,13 +39,14 @@ function Details() {
                 <div className="actions">
                     {isUser ?
                         isOwner ? <><Link className="button" to={`/edit/${tripId}`}>Edit</Link> <a onClick={deleteHandler} className="button" href={`/delete/${trip._id}`}>Delete</a></>
-                            : <a className="button" href="#">Like</a>
+                            // : <a className="button" href="#">Like</a>
+                            : ''
                         : ''}
 
-                    <div className="likes">
+                    {/* <div className="likes">
                         <img className="hearts" src="/images/heart.png" />
                         <span id="total-likes">Likes: 0</span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="trip-description">
