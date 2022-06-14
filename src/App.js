@@ -6,13 +6,14 @@ import Register from "./components/Register/Register";
 import MyTrips from "./components/MyTrips/MyTrips";
 import Create from "./components/Create/Create";
 import UserContext from "./contexts/UserContext";
-import {useState} from 'react';
 import Logout from "./components/Logout/Logout";
 import Details from "./components/Details/Details";
 import Edit from "./components/Edit/Edit";
+import useLocalStorage from "./hooks/useLocalStorage";
+
 
 function App() {
-  let [userInfo, setUserInfo] = useState({});
+  let [userInfo, setUserInfo] = useLocalStorage('user', {});
   let settingUser = (user) => {
     setUserInfo(user);
   }
