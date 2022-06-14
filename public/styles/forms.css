@@ -123,6 +123,7 @@ form textarea:focus {
 	padding: 2rem;
 	overflow: auto;
 	text-align: justify;
+	margin-left: 100px;
 }
 
 .details {
