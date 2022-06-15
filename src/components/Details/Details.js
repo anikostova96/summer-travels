@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { bookTrip, deleteTrip, getById, tripMembers, userBookTrip } from '../../services/tripService';
-import IsOwner from '../utils/IsOwner';
-import IsUser from '../utils/IsUser';
+import IsOwner from '../../utils/IsOwner';
+import IsUser from '../../utils/IsUser';
 import { useContext } from 'react';
 import UserContext from "../../contexts/UserContext";
 import { useNavigate, Link } from 'react-router-dom';
@@ -22,14 +22,14 @@ function Details() {
             .then(res => {
                 setTrip(res)
             })
-    }, []);
+    }, [tripId]);
 
     tripMembers(tripId)
         .then(res => setBookTrips(res));
     userBookTrip(tripId, userInfo._id)
         .then(res => {
             setUserBooks(res);
-        });
+        });    
 
     const deleteHandler = (e) => {
         e.preventDefault();
@@ -59,7 +59,7 @@ function Details() {
                 <div className="actions">
                     {isUser ?
                         isOwner ? <><Link className="button" to={`/edit/${tripId}`}>Edit</Link> <a onClick={deleteHandler} className="button" href={`/delete/${trip._id}`}>Delete</a></>
-                            : userBooks == 0 ? <a className="button" onClick={bookHandler} href="">Book it</a> : ''
+                            : userBooks == 0 ? <a className="button" onClick={bookHandler} href="">Book it</a> : <p> &#10003; Already booked</p>
                         // : ''
                         : ''}
 

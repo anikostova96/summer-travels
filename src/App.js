@@ -5,23 +5,18 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import MyTrips from "./components/MyTrips/MyTrips";
 import Create from "./components/Create/Create";
-import UserContext from "./contexts/UserContext";
 import Logout from "./components/Logout/Logout";
 import Details from "./components/Details/Details";
 import Edit from "./components/Edit/Edit";
-import useLocalStorage from "./hooks/useLocalStorage";
-
+import {AuthProvider} from './contexts/UserContext';
 
 function App() {
-  let [userInfo, setUserInfo] = useLocalStorage('user', {});
-  let settingUser = (user) => {
-    setUserInfo(user);
-  }
+  
   return (
-    <UserContext.Provider value={{settingUser, userInfo}}>
+    <AuthProvider>
       <div id="container">
 
-        <Header userInfo={userInfo} />
+        <Header />
 
         <main id="site-content">
           <Routes>
@@ -41,7 +36,7 @@ function App() {
           <p>&copy; Summer Travels</p>
         </footer>
       </div>
-    </UserContext.Provider>
+    </AuthProvider>
   );
 }
 

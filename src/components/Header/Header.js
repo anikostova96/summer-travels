@@ -1,8 +1,9 @@
 import {Link} from 'react-router-dom';
+import {useAuth} from '../../contexts/UserContext';
 
-function Header({
-    userInfo
-}) {
+
+function Header() {
+    let {userInfo} = useAuth();
     return (
         <header id="site-header">
             <nav className="navbar">

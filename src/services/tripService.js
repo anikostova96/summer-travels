@@ -80,4 +80,5 @@ async function userBookTrip(tripId, userId) {
 }
 
 
+
 export { getAll, createTrip, myTripss, getById, deleteTrip, editTrip, bookTrip, tripMembers, userBookTrip };
