@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {editTrip, getById } from '../../services/tripService';
+import { editTrip, getById } from '../../services/tripService';
 import { useContext } from 'react';
 import UserContext from "../../contexts/UserContext";
 import { useNavigate } from 'react-router-dom';
-
-
 function Edit() {
     let [trip, setTrip] = useState({});
     let tripId = useParams().id;
@@ -15,9 +13,17 @@ function Edit() {
     useEffect(() => {
         getById(tripId)
             .then(res => {
+                if(res._ownerId !== userInfo._id) {
+                    if(userInfo._id) {
+                        navigate('/');
+                    } else {
+                        navigate('/login');
+                    }
+                }
                 setTrip(res)
             })
-    }, []);
+    }, [tripId]);
+
 
     const editHandler = (e) => {
         e.preventDefault();
@@ -63,11 +69,12 @@ function Edit() {
                             <input type="number" name="price" id="price" defaultValue={trip.price} />
                         </span>
                     </p>
-                    <input className="button submit" type="submit" value="Save"/>
+                    <input className="button submit" type="submit" value="Save" />
                 </fieldset>
             </form>
         </section>
-    );
+    
+    )
 }
 
 

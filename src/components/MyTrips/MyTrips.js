@@ -3,6 +3,8 @@ import { useContext } from 'react';
 import { useEffect, useState } from 'react';
 import { myTripss } from '../../services/tripService';
 import UserContext from "../../contexts/UserContext";
+import {isAuth} from '../../hoc/isAuth';
+
 
 function MyTrips() {
     let [myTrips, setMyTrips] = useState([]);
@@ -31,4 +33,4 @@ function MyTrips() {
     );
 }
 
-export default MyTrips;
+export default isAuth(MyTrips);

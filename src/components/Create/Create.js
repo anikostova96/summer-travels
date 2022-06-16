@@ -2,6 +2,7 @@ import { createTrip } from "../../services/tripService";
 import { useContext } from 'react';
 import UserContext from "../../contexts/UserContext";
 import { useNavigate } from 'react-router-dom';
+import {isAuth} from '../../hoc/isAuth';
 
 function Create() {
     let { userInfo } = useContext(UserContext);
@@ -59,4 +60,4 @@ function Create() {
     );
 }
 
-export default Create;
+export default isAuth(Create);
