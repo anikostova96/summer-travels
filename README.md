@@ -14,18 +14,18 @@ The pages which are accessible to guests are:
 # 👤 Private part
 The pages which are accessible to all logged-in users are:
 
-catalog
-my trips
-add trips
-logout
-details
+- catalog
+- my trips
+- add trips
+- logout
+- details
 
 # 🧑‍🎓 Creators only
-edit
-delete
+- edit
+- delete
 
 # 🧑‍🎓 Non creators and not booked only
-book it
+- book it
 
 # Getting Started with Create React App
 
