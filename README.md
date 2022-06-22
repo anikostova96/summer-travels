@@ -7,9 +7,11 @@ Each customer has the opportunity to register for a create and book trips.
 # 🌎 Public part
 The pages which are accessible to guests are:
 
-catalog
-register
-login
+Markup : * catalog
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * register
+          * login
 
 # 👤 Private part
 The pages which are accessible to all logged-in users are:
