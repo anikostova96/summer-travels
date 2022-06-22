@@ -1,5 +1,32 @@
 # ✍️ App overview
 
+Summer Trips is an online app which provides customers to review, create and book the trips.
+
+Each customer has the opportunity to register for a create and book trips. 
+
+# 🌎 Public part
+The pages which are accessible to guests are:
+
+catalog
+register
+login
+
+# 👤 Private part
+The pages which are accessible to all logged-in users are:
+
+catalog
+my trips
+add trips
+logout
+details
+
+# 🧑‍🎓 Creators only
+edit
+delete
+
+# 🧑‍🎓 Non creators and not booked only
+book it
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
