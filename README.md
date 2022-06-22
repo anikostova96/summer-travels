@@ -4,6 +4,8 @@ Summer Trips is an online app which provides customers to review, create and boo
 
 Each customer has the opportunity to register for a create and book trips. 
 
+<img align="center" alt="stem-swift-academy" src="/public/images/home">
+
 # 🌎 Public part
 The pages which are accessible to guests are:
 
