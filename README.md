@@ -13,6 +13,8 @@ The pages which are accessible to guests are:
 - register
 - login
 
+<img align="center" alt="stem-swift-academy" src="/public/images/guests.png">
+
 # 👤 Private part
 The pages which are accessible to all logged-in users are:
 
@@ -22,12 +24,18 @@ The pages which are accessible to all logged-in users are:
 - logout
 - details
 
+<img align="center" alt="stem-swift-academy" src="/public/images/login.png">
+
 # 🧑‍🎓 Creators only
 - edit
 - delete
 
+<img align="center" alt="stem-swift-academy" src="/public/images/edit.png">
+
 # 🧑‍🎓 Non creators and not booked only
 - book it
+
+<img align="center" alt="stem-swift-academy" src="/public/images/bookit.png">
 
 ## How to Use
 
